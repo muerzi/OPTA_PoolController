@@ -75,20 +75,20 @@ Variables affecting the system's operation can be configured through the web int
   };
 
 
-###Operational Flags:
-bool debugFlag = true;: Enable or disable debug output to Serial.
-bool isWinter = false;: Indicate if the system should operate in winter mode, affecting relay management logic.
-Debugging and Logging
-Debugging Mode: Controlled by the debugFlag variable. When enabled, various operational messages will be printed to the Serial interface.
-USB Logging: If compiled with LogToUSBDrive directive, logs can be written to a USB storage device. This feature requires additional configuration:
+### Operational Flags:
+#### bool debugFlag = true;: Enable or disable debug output to Serial.
+#### bool isWinter = false;: Indicate if the system should operate in winter mode, affecting relay management logic.
+#### Debugging and Logging
+#### Debugging Mode: Controlled by the debugFlag variable. When enabled, various operational messages will be printed to the Serial interface.
+#### USB Logging: If compiled with LogToUSBDrive directive, logs can be written to a USB storage device. This feature requires additional configuration:
 #ifdef LogToUSBDrive: Uncomment and configure this section to enable USB logging.
-MDNS Configuration
+#### MDNS Configuration
 Hostname: The MDNS hostname can be set to make accessing the web interface more intuitive.
 Modify the String hostname = "PoolController"; line to change the hostname.
 Adjusting Operational Logic
 The logic that controls the operation of the pool components based on time schedules and the state of the system (e.g., winter mode, manual override) is implemented within the manageRelays function and related areas of the code. Advanced users can modify this logic to introduce custom behaviors and controls.
 
-###Saving Changes
+### Saving Changes
 After adjusting configuration variables through the web interface, ensure to save the changes. The system will write the new settings to flash memory, preserving them across restarts.
 
 ## Contributing
