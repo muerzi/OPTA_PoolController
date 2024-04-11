@@ -13,9 +13,7 @@ The Pool Controller System is an automated solution designed to manage the opera
 
 ## Hardware Requirements
 
-- MCU or development board with Ethernet connectivity
-- External relays for controlling pool hardware (pump, heater, UV, lights)
-- Ethernet shield or module compatible with the MCU
+- Arduino Opta RS485
 - Optional: USB storage for logging (when compiled with `LogToUSBDrive` directive)
 
 ## Software Dependencies
@@ -28,10 +26,10 @@ The Pool Controller System is an automated solution designed to manage the opera
 
 ## Installation
 
-1. **Hardware Setup**: Connect your hardware according to the schematics provided in the `schematics` directory (to be added by the user).
-2. **Library Installation**: Install all required libraries through your IDE's library manager or manually include them into your project directory.
+1. **Library Installation**: Install all required libraries through your IDE's library manager or manually include them into your project directory.
+2. **Hardware Setup**: Follow this tutorial: https://docs.arduino.cc/tutorials/opta/user-manual/
 3. **Configuration**: Adjust the `#define` directives at the beginning of the main code file to match your hardware setup and preferences.
-4. **Compilation and Upload**: Compile the code and upload it to your microcontroller using the appropriate IDE and tools for your hardware.
+4. **Compilation and Upload**: Compile the code and upload it to your microcontroller using the Arduino IDE.
 
 ## Usage
 
